@@ -1,24 +1,54 @@
 run.config:
   # install php and associated runtimes
   engine: php
-  # php engine configuration (php version, extensions, etc)
- engine.config:
-    # sets the php version to 7.0
-    runtime: php-5.6
-web.main:
-	start:
-		php: start-php
-		apache: start-apache
-	writable_dirs:
-    		- tmp/cache
-	log_watch:
-	    apache[access]: /data/var/log/apache/access.log
-    	apache[error]: /data/var/log/apache/error.log
-	    php[error]: /data/var/log/php/php_error.log
-	    php[fpm]: /data/var/log/php/php_fpm.log
 
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
+
+    # sets the php version to 7.0
+    runtime: php-7.0
+
+    # use nginx
+    webserver: nginx
+
+    # public directory
+    document_root: web
+
+    # index
+    nginx_default_gateway: index.php
+
+    # enables php extensions
+    extensions:
+      - ctype
+      - dom
+      - iconv
+      - mbstring
+      - pdo
+      - pdo_mysql
+      - session
+      - simplexml
+      - tokenizer
+      - xml
+      - zlib
+
+#
 deploy.config:
   before_live:
     web.main:
-      - php index.php migrate
+      - php bin/console doctrine:schema:update --force
 
+# add a MySQL database
+data.db:
+  image: nanobox/mysql
+
+#
+web.main:
+  start: php-server
+
+  # add writable dirs to your web component
+  writable_dirs:
+    - var
+
+  # the path to a logfile you want streamed to the nanobox dashboard
+  log_watch:
+    symfony[error]: /app/storage/logs/symfony.log
