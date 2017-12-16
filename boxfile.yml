@@ -24,7 +24,10 @@ deploy.config:
     web.main:
       - php index.php migrate
 
- 
+# add a MySQL database
+data.db:
+  image: nanobox/mysql
+
 #
 web.main:
   start: php-server
