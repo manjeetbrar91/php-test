@@ -1,0 +1,4 @@
+DateTime: 2017-12-02 22:35:14 UTC,
+Error Message: INVALID_FIELD: No such column 'YouTube_URL__c' on entity 'Contact'. If you are attempting to use a custom field, be sure to append the '__c' after the custom field name. Please reference your WSDL or the describe call for the appropriate names.,
+Line: 200,File Name:/home/admin/web/wine-oh.io/public_html/wp-content/plugins/salesforce/partneruser.php
+

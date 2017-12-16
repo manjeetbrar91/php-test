@@ -1,0 +1,290 @@
+.container-wrap{
+	background:#f5f5f5;
+	padding:15px;
+}
+.title-wrap {
+    float: left;
+    width: 100%;
+    padding: 15px 15px 0;
+}
+.wine-slider,  .incentives-wrap, .tag-wrap, .wine-ohs-wrap, .Notifications {
+    background: #fff;
+    border-radius: 4px;
+	margin-bottom:30px;
+	  min-height: 400px;
+	box-shadow:0 1px 1px rgba(0,0,0,0.1);
+}
+
+h1.title{
+	font-size:18px;
+	color:#333;
+	margin-bottom:0;
+}
+.view-all-btn{
+		font-size: 14px;
+		color: #dd3e6d;
+}
+.wine-slides{
+	margin-top:15px;
+}
+#owl-demo .item {
+    margin: auto 40px;
+    position: relative;
+    text-align: center;
+	border:1px solid #eee;
+}
+#owl-demo .item img{
+  display: block;
+  height: auto;
+}
+.owl-text {
+	background: #e99ab1;
+	text-align: left;
+}
+.owl-text a{
+	font-size: 16px;
+	color: #fff;
+}
+.owl-text {
+    background: rgba(233, 154, 177, 0.58);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 10px;
+}
+.owl-prev {
+    background: url(../images/left-arrow.png) !important;
+	background-repeat: no-repeat;
+	height: 40px;
+    width: 22px;
+	opacity: 1 !important;
+	position: absolute;
+    left: 0;
+    top: 70px;
+}
+.owl-next {
+    background: url(../images/right-arrow.png) !important;
+	background-repeat: no-repeat;
+	height: 40px;
+    width: 22px;
+	opacity: 1 !important;
+	position: absolute;
+    right: 0;
+    top: 70px;
+}
+.wine-slides .owl-theme .owl-controls .owl-buttons div {
+    color: transparent;
+}
+.notifications-list h3 {
+  color: #dd3e6d;
+  font-size: 16px;
+  font-weight: bold;
+}
+.notifications-list li {
+  list-style: outside none none;
+}
+.notifications-list p {
+  font-size: 14px;
+  color: #777777;
+  margin:0;
+}
+.notifications-list > ul {
+  padding: 0 15px;
+}
+#owl-demo1 .owl-prev{
+	top: 0px;
+	color: transparent;
+	background: url(../images/white-left-arrow.png) !important;
+	
+}
+#owl-demo1 .owl-next{
+	top: 0px;
+	color: transparent;
+	background: url(../images/white-right-arrow.png) !important;
+}
+
+#owl-demo1 .item{
+	text-align: center;
+    margin: 0 auto;
+}
+.logout-button{
+	text-align:right;
+	margin-top: 30px;
+}
+.logout-button a {
+    color: #F4B827;
+    border: 1px solid #F4B827;
+    padding: 10px 50px;
+    border-radius: 3px;
+}
+.logout-button a:hover {
+	color: #F4B827;
+}
+.owl-name.active a{
+	color: #F4B827;
+	transition: all 0.2s ease-in-out;
+}
+#owl-demo1 .owl-name a:hover {
+	color: #F4B827;
+}
+.dashboard_menu {
+	background: url(../images/menus/dashboard_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .dashboard_menu {
+	background: url(../images/menus/dashboard_on.png);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 50px;
+	background-position-x: center;
+}
+.wines_menu {
+	background: url(../images/menus/wines_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .wines_menu  {
+	background: url(../images/menus/wines_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.tags_menu{
+	background: url(../images/menus/tags_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .tags_menu{
+	background: url(../images/menus/tags_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.wineoh_menu{
+	background: url(../images/menus/wines_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .wineoh_menu{
+	background: url(../images/menus/wines_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.prices_menu{
+	background: url(../images/menus/prices_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .prices_menu{
+	background: url(../images/menus/prices_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.incentives_menu{
+	background: url(../images/menus/incentives_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .incentives_menu{
+	background: url(../images/menus/incentives_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.locations_menu{
+	background: url(../images/menus/locations_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .locations_menu{
+	background: url(../images/menus/locations_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.associates_menu{
+	background: url(../images/menus/associates_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .associates_menu{
+	background: url(../images/menus/associates_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.profile_menu{
+	background: url(../images/menus/profile_off.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position-x: center;
+}
+.menu-link:hover .profile_menu{
+	background: url(../images/menus/profile_on.png);
+	width: 130px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.menu-link p{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	}
+.menu-link:hover {
+	text-decoration: none;
+}
+.menu-link:hover p{
+	color: #F4B827;
+	transition: 0.5s ease-in-out;
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+}
+@media (max-width: 767px) {
+	.logout-button a {
+		padding: 5px 40px;
+	}
+	.logout-button {
+	margin-top: 90px;
+}
+.ia-heading h2.h1{
+	    font-size: 40px;
+}
+}
