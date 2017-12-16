@@ -9,13 +9,12 @@ run.config:
     runtime: php-7.0
 
     # use nginx
-    webserver: nginx
+    webserver: apache
 
     # public directory
-    document_root: web
+   
 
-    # index
-    nginx_default_gateway: index.php
+   
 
      
 #
