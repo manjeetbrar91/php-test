@@ -1,0 +1,8 @@
+run.config:
+  # install php and associated runtimes
+  engine: php
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
+    # sets the php version to 7.0
+    runtime: php-5.6
+
