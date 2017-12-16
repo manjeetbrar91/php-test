@@ -17,30 +17,14 @@ run.config:
     # index
     nginx_default_gateway: index.php
 
-    # enables php extensions
-    extensions:
-      - ctype
-      - dom
-      - iconv
-      - mbstring
-      - pdo
-      - pdo_mysql
-      - session
-      - simplexml
-      - tokenizer
-      - xml
-      - zlib
-
+     
 #
 deploy.config:
   before_live:
     web.main:
-      - php bin/console doctrine:schema:update --force
+      - php index.php migrate
 
-# add a MySQL database
-data.db:
-  image: nanobox/mysql
-
+ 
 #
 web.main:
   start: php-server
