@@ -1,0 +1,464 @@
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/avenir_roman-webfont.woff2') format('woff2'),
+         url('../fonts/avenir_roman-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/aeh-webfont.woff2') format('woff2'),
+         url('../fonts/aeh-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* CLEAR STYLE */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font: 400 16px/20px 'Avenir', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {background: transparent;}
+
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+b,
+strong {font-weight: bold;}
+
+audio {display: none;}
+
+
+/* CSS ANIMATION */
+
+@-webkit-keyframes opacityOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes opacityOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@-webkit-keyframes opacityIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes opacityIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes keyframesClouds {
+    from {opacity: .1}
+    to {opacity: 1}
+}
+
+@keyframes keyframesClouds {
+    from {opacity: .1}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes keyframesSun {
+    from {
+        opacity: 0;
+        bottom: -70%;
+    }
+    40% {
+        opacity: 1;
+        bottom: 5%;
+    }
+    50% {
+        opacity: 1;
+        bottom: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes keyframesSun {
+    from {
+        opacity: 0;
+        bottom: -70%;
+    }
+    40% {
+        opacity: 1;
+        bottom: 5%;
+    }
+    50% {
+        opacity: 1;
+        bottom: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@-webkit-keyframes keyframesLogin {
+    from {
+        opacity: 0;
+        transform: scale(.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes keyframesLogin {
+    from {
+        opacity: 0;
+        transform: scale(.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+/* SCENE BLOCK */
+
+.scene-block {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+    .scene-block img {
+        margin: auto;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100.03%;
+        z-index: 1;
+    }
+
+    .scene-block .morning {opacity: 0;}
+
+    .scene-block .sun.animated .morning {
+        -webkit-animation: keyframesSun 3s ease-in-out 3.5s 1 forwards;
+        animation: keyframesSun 3s ease-in-out 3.5s 1 forwards;
+    }
+
+    .scene-block .clouds img {
+        opacity: .1;
+        z-index: 2;
+    }
+
+    .scene-block .clouds.animated img {
+        -webkit-animation: keyframesClouds 4.5s ease-in-out 2s 1 forwards;
+        animation: keyframesClouds 4.5s ease-in-out 2s 1 forwards;
+    }
+
+    .scene-block .sky.animated .night {
+        -webkit-animation: opacityOut 4.5s ease-in-out 2s 1 forwards;
+        animation: opacityOut 4.5s ease-in-out 2s 1 forwards;
+    }
+
+    .scene-block .sky.animated .morning {
+        -webkit-animation: opacityIn 4.5s ease-in-out 2s 1 forwards;
+        animation: opacityIn 4.5s ease-in-out 2s 1 forwards;
+    }
+
+    .scene-block .mountains.animated .night {
+        -webkit-animation: opacityOut 1s ease-in-out 6.5s 1 forwards;
+        animation: opacityOut 1s ease-in-out 6.5s 1 forwards;
+    }
+
+    .scene-block .mountains.animated .morning {
+        -webkit-animation: opacityIn 4.5s ease-in-out 2s 1 forwards;
+        animation: opacityIn 4.5s ease-in-out 2s 1 forwards;
+    }
+
+    .scene-block .blur img {
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .scene-block .blur.animated img {
+        -webkit-animation: opacityIn 1s ease-in-out 6.7s 1 forwards;
+        animation: opacityIn 1s ease-in-out 6.7s 1 forwards;
+    }
+
+/* LOGIN WRAPPER */
+
+.login-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 800px;
+    opacity: 0;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.login-wrapper.animated {
+    -webkit-animation: keyframesLogin .5s ease-in-out 7.7s 1 forwards;
+    animation: keyframesLogin .5s ease-in-out 7.7s 1 forwards;
+}
+
+    .login-wrapper .login-text {padding-right: 50px;}
+
+    @media all and (max-width: 800px){
+
+        .login-wrapper .login-text {display: none;}
+
+    }
+
+        .login-wrapper h2 {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 30px;
+            margin: 0;
+        }
+
+            .login-wrapper h2 img {
+                height: 37px;
+                margin: 0 5px;
+                vertical-align: middle;
+                width: 40px;
+            }
+
+        .login-wrapper p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 26px;
+            margin: 20px 0 40px;
+        }
+
+            .login-wrapper p a {
+                color: #fff;
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            .login-wrapper p a:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        .login-wrapper a {
+            color: rgb(255, 149, 108);
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration: underline;
+        }
+
+        .login-wrapper a:hover {
+            color: rgb(212, 123, 90);
+            text-decoration: none;
+        }
+
+    /* Login wrapper > Okta sign in plugin */
+
+    .login-wrapper #okta-sign-in.main-container {
+        border: none;
+        border-radius: 5px;
+        box-shadow: none;
+        font-family: 'Avenir', 'Arial', sans-serif;
+        margin: 70px 0 0;
+        padding: 50px 40px 80px;
+        width: 330px;
+    }
+
+        .login-wrapper #okta-sign-in .okta-sign-in-header {
+            border: none;
+            padding: 0;
+        }
+
+        .login-wrapper .o-form-has-errors .infobox-error p {
+            color: rgb(227, 72, 67);
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+        }
+
+            .login-wrapper .auth-org-logo {
+                max-height: 120px;
+                max-width: 120px;
+                position: absolute;
+                top: -120px;
+                right: 0;
+                left: 0;
+            }
+
+            .login-wrapper #okta-sign-in h2 {
+                color: #0c0c0d;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 20px;
+                margin: 0 0 10px;
+            }
+
+                .login-wrapper #okta-sign-in h2 span {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 5px 0 20px;
+                }
+
+        .login-wrapper .auth-content {padding: 0;}
+
+            .login-wrapper .o-form-edit-mode .o-form-content {padding-bottom: 0;}
+
+                .login-wrapper .o-form-fieldset {margin-bottom: 9px;}
+
+                .login-wrapper .o-form-button-bar {padding-bottom: 9px;}
+
+                    .login-wrapper .o-form .o-form-input .input-icon,
+                    .login-wrapper .o-form .o-form-input .input-tooltip {display: none;}
+
+                    .login-wrapper .o-form .input-fix {border: none;}
+
+                    .login-wrapper #okta-sign-in .okta-form-input-field input {
+                        border: 1px solid rgb(115, 115, 115);
+                        border-radius: 2px;
+                        font-size: 16px;
+                        padding: 0 20px 2px;
+                        transition: border .5s, box-shadow .5s;
+                    }
+
+                    .login-wrapper #okta-sign-in .okta-form-input-field input:focus {
+                        border-color: #0a84ff;
+                        box-shadow: 0 0 0 2px rgba(189, 217, 255, .75);
+                    }
+
+                    .login-wrapper .o-form-has-errors .o-form-explain.o-form-input-error {
+                        font-size: 12px;
+                        margin: 0;
+                    }
+
+                    .login-wrapper #okta-sign-in .button-primary {
+                        background: #0a84ff;
+                        border: 1px solid #0060df;
+                        border-radius: 2px;
+                        color: #fff;
+                        font-size: 18px;
+                        height: 43px;
+                        line-height: 18px;
+                        padding: 8px 0;
+                        transition: background .5s, border .5s;
+                    }
+
+                    .login-wrapper #okta-sign-in .button-primary:hover {
+                        background: #0971db;
+                        border-color: #004fb7;
+                    }
+
+        .login-wrapper .auth-footer {text-align: center;}
+
+            .login-wrapper #okta-sign-in .auth-footer .link {
+                color: #0a84ff;
+                text-decoration: none;
+            }
+
+            .login-wrapper #okta-sign-in .auth-footer .link:hover {
+                color: #086fd6;
+                text-decoration: underline;
+            }
+
+            .login-wrapper .auth-footer .link.help {display: none;}
+
+            .login-wrapper .auth-footer .help-links {display: block !important;}
+
+                .login-wrapper .auth-content .help-links li:nth-child(2n) {
+                    margin: auto;
+                    position: absolute;
+                    right: 0;
+                    bottom: -60px;
+                    left: 0;
+                }
+
+                    .login-wrapper #okta-sign-in .auth-footer .help-links li:nth-child(2n) a {
+                        background: rgb(243, 243, 243);
+                        border: 1px solid rgb(236, 236, 236);
+                        border-radius: 3px;
+                        color: rgb(202, 202, 202);
+                        font-size: 12px;
+                        padding: 4px 10px;
+                        transition: all .5s;
+                    }
+
+                    .login-wrapper #okta-sign-in .auth-footer .help-links li:nth-child(2n) a:hover {
+                        background: rgb(222, 222, 222);
+                        border-color: rgb(219, 219, 219);
+                        color: rgb(177, 177, 177);
+                        text-decoration: none;
+                    }
+
+    @media all and (max-height: 500px) and (orientation: landscape){
+
+        .login-wrapper #okta-sign-in.main-container {
+            margin: 30px 0 10px;
+            padding: 50px 20px 40px;
+            width: 400px;
+        }
+
+            .login-wrapper .auth-org-logo {
+                max-height: 70px;
+                max-width: 70px;
+                top: -70px;
+            }
+
+            .login-wrapper #okta-sign-in h2 {margin: 0;}
+
+            .login-wrapper .o-form-fieldset {
+                display: inline-block;
+                margin-bottom: 0;
+                width: 48%;
+            }
+
+            .login-wrapper .o-form-fieldset + .o-form-fieldset {margin-left: 4%;}
+
+            .login-wrapper .auth-content .help-links li {
+                display: inline-block;
+                margin-top: 0;
+            }
+
+            .login-wrapper .auth-content .help-links li:last-child {margin-left: 10px;}
+
+            .login-wrapper .auth-content .help-links li:nth-child(2n) {bottom: -30px;}
+
+    }

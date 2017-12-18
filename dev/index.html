@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CHARSET -->
+    <meta charset="UTF-8">
+
+    <!-- MOBILE META's -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#562345">
+    <meta name="theme-color" content="#562345">
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="60x60" href="svg/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="svg/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="svg/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="svg/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="svg/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="svg/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="svg/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="svg/favicons/favicon-16x16.png">
+
+    <!-- TITLE -->
+    <title>iWine</title>
+
+    <!-- STYLES -->
+    <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.13.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet">
+    <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.13.0/css/okta-theme.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css?18">
+
+    <!-- SCRIPTS -->
+    <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.13.0/js/okta-sign-in.min.js" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <!-- OKTA PLUGIN WRAPPER -->
+    <div class="login-wrapper" data-login>
+        <div class="login-text">
+            <h2>Already a <img src="svg/logo.svg" alt="Wine-oh">?</h2>
+            <p>Sign in to your Wine-Oh! account to access your wines, offers and other settings. If you don’t have a Wine-Oh! account you can create one <a href="https://wine-oh.io/register/">here</a>.</p>
+            <a href="https://wine-oh.io/features/">Learn more about Wine-Oh!</a>
+        </div>
+        <div id="okta-login-container"></div>
+    </div>
+    <!-- END OKTA PLUGIN WRAPPER -->
+
+    <!-- SCENE BLOCK -->
+    <div class="scene-block" data-scene="night">
+
+        <!-- Sky images -->
+        <div class="sky" data-sky>
+            <img src="svg/night/bg.svg" alt="Wine-oh" class="night">
+            <img src="svg/morning/bg.svg" alt="Wine-oh" class="morning">
+        </div>
+
+        <!-- Sun image -->
+        <div class="sun" data-sun>
+            <img src="svg/morning/sun.svg" alt="Wine-oh" class="morning">
+        </div>
+
+        <!-- Mountains images -->
+        <div class="mountains" data-mount>
+            <img src="svg/night/mountain.svg" alt="Wine-oh" class="night">
+            <img src="svg/morning/mountain.svg" alt="Wine-oh" class="morning">
+        </div>
+
+        <!-- Clouds image -->
+        <div class="clouds" data-cloud>
+            <img src="svg/clouds.svg" alt="Wine-oh">
+        </div>
+
+        <!-- Blur image -->
+        <div class="blur" data-blur>
+            <img src="svg/blur.jpg" alt="Wine-oh">
+        </div>
+
+    </div>
+    <!-- END SCENE BLOCK -->
+
+    <!-- MUSIC -->
+    <audio class="page-audio js-pageAudioFirst" preload="auto">
+        <source src="audio/cork.mp3" type="audio/mpeg">
+        <source src="audio/cork.wav" type="audio/wav">
+    </audio>
+    <audio class="page-audio js-pageAudioSecond" preload="auto">
+        <source src="audio/pour.mp3" type="audio/mpeg">
+        <source src="audio/pour.wav" type="audio/wav">
+    </audio>
+    <audio class="page-audio js-pageAudioThird" preload="auto">
+        <source src="audio/rain.mp3" type="audio/mpeg">
+        <source src="audio/rain.wav" type="audio/wav">
+    </audio>
+    <!-- END MUSIC -->
+
+</body>
+</html>
