@@ -1,6 +1,8 @@
 <?php
- echo "HELLO APP"
-//define('WP_USE_THEMES', true);
+ //echo "HELLO APP"
+define('WP_USE_THEMES', true);
 
 //
-//require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+
+?>
