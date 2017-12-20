@@ -2,11 +2,11 @@
 /**
  * The base configuration for WordPress
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * 	The wp-config.php creation script uses this file during the
+ * 	installation. You don't have to use the web site, you can
+ * 	copy this file to "wp-config.php" and fill in the values.
  *
- * This file contains the following configurations:
+ * 	This file contains the following configurations:
  *
  * * MySQL settings
  * * Secret keys
@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'admin_wpdatabase');
+define('DB_NAME', 'admin_test');
 
 /** MySQL database username */
-define('DB_USER', 'admin_wordpress');
+define('DB_USER', 'admin_testuser');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'JEX87eN.C6SD71');
+define('DB_PASSWORD', 'QB8lhXwAMk');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'wine-oh.io');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
