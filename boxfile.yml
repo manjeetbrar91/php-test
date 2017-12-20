@@ -1,14 +1,44 @@
-run.config:
+--- 
+run.config: 
   engine: php
-  engine.config:
-    # Web Server Settings
-    webserver: 'apache'
-   
-
-    # PHP Settings
-    runtime: 'php-7.0'
-    extensions:
-    	- pdo
+  engine.config: 
+    allow_url_fopen: "On"
+    apache_access_log: false
+    apache_default_gateway: index.php
+    apache_index_list: 
+      - index.php
+      - index.html
+    apache_log_level: warn
+    apache_max_clients: 128
+    apache_max_requests: 10000
+    apache_max_spares: 10
+    apache_modules: 
+      - actions
+      - alias
+      - rewrite
+    apache_php_interpreter: fpm
+    apache_server_limit: 128
+    apache_static_expire: 86400
+    apc_filters: ""
+    apc_num_files_hint: 1000
+    apc_shm_size: 32M
+    apc_user_entries_hint: 4096
+    browscap: app/browscap.ini
+    date_timezone: US/central
+    default_locale: en_US
+    default_mimetype: text/html
+    disable_functions: 
+      - exec
+      - shell_exec
+      - system
+    display_errors: stderr
+    eaccelerator_filter: ""
+    eaccelerator_shm_max: "0"
+    eaccelerator_shm_size: "0"
+    error_reporting: E_ALL
+    expose_php: "On"
+    extensions: 
+      - pdo
       - pdo_mysql
       - session
       - dom
@@ -18,98 +48,39 @@ run.config:
       - curl
       - gd
       - mbstring
-    zend_extensions:
+    file_uploads: true
+    geoip_custom_directory: app/GeoIP/
+    iconv_internal_encoding: UTF-8
+    max_execution_time: 30
+    max_file_uploads: 20
+    max_input_time: 30
+    max_input_vars: 1000
+    memcache_chunk_size: 8192
+    memcache_hash_strategy: standard
+    memory_limit: 128M
+    php_fpm_events_mechanism: epoll
+    php_fpm_max_children: 20
+    php_fpm_max_requests: 128
+    php_fpm_max_spare_servers: 1
+    post_max_size: 8M
+    register_argc_argv: "Off"
+    register_globals: "Off"
+    runtime: php-7.0
+    session_autostart: false
+    session_length: 3600
+    session_save_handler: files
+    session_save_path: app/sessions
+    short_open_tag: true
+    upload_max_filesize: 2M
+    webserver: apache
+    zend_extensions: 
       - ioncube_loader
       - opcache
-    short_open_tag: true
-    zlib_output_compression: 'Off'
-    allow_url_fopen: 'On'
-    disable_functions:
-      - exec
-      - shell_exec
-      - system
-    expose_php: 'On'
-    max_execution_time: 30
-    max_input_time: 30
-    memory_limit: '128M'
-    error_reporting: E_ALL
-    display_errors: 'stderr'
-    register_globals: 'Off'
-    register_argc_argv: 'Off'
-    post_max_size: '8M'
-    upload_max_filesize: '2M'
-    file_uploads: true
-    max_file_uploads: 20
-    max_input_vars: 1000
-    default_mimetype: 'text/html'
-    default_locale: 'en_US'
-    browscap: 'app/browscap.ini'
-    session_save_handler: 'files'
-    session_save_path: 'app/sessions'
-    session_length: 3600
-    session_autostart: false
-    date_timezone: 'US/central'
-    iconv_internal_encoding: 'UTF-8'
-
-    # Apache Settings
-    
-    apache_index_list:
-      - index.php
-      - index.html
-    apache_default_gateway: 'index.php'
-    apache_php_interpreter: fpm
-    apache_modules:
-      - actions
-      - alias
-      - rewrite
-    apache_max_spares: 10
-    apache_max_clients: 128
-    apache_server_limit: 128
-    apache_max_requests: 10000
-    apache_static_expire: 86400
-    apache_log_level: warn
-    apache_access_log: false
-
-  
-
-    # Built-In PHP Web Server Settings
-   
-
-    # PHP-FPM Settings
-    php_fpm_events_mechanism: 'epoll'
-    php_fpm_max_children: 20
-    php_fpm_max_spare_servers: 1
-    php_fpm_max_requests: 128
-
-    # PHP GeoIP Settings
-    geoip_custom_directory: 'app/GeoIP/'
-
-    # PHP Memcache Settings
-    memcache_chunk_size: 8192
-    memcache_hash_strategy: 'standard'
-
-    # PHP Mongo Settings
- 
-
-    # PHP APC Settings
-    apc_shm_size: '32M'
-    apc_num_files_hint: 1000
-    apc_user_entries_hint: 4096
-    apc_filters: ''
-
-    # PHP eAccelerator Settings
-    eaccelerator_shm_max: '0'
-    eaccelerator_shm_size: '0'
-    eaccelerator_filter: ''
-
-web.main:
+    zlib_output_compression: "Off"
+web.main: 
+  log_watch: 
+    ? "symfony[error]"
+    : /app/storage/logs/symfony.log
   start: php-server
-
-  # add writable dirs to your web component
-  writable_dirs:
+  writable_dirs: 
     - var
-
-  # the path to a logfile you want streamed to the nanobox dashboard
-  log_watch:
-    symfony[error]: /app/storage/logs/symfony.log
-    
