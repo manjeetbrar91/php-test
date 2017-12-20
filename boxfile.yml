@@ -12,18 +12,6 @@ run.config:
      
     apache_max_requests: 10000
     apache_max_spares: 10
- 
-    apache_php_interpreter: fpm
-    
-    apache_static_expire: 86400
-    apc_filters: ""
-    apc_num_files_hint: 1000
-    apc_shm_size: 32M
-    apc_user_entries_hint: 4096
-    browscap: app/browscap.ini
-    date_timezone: US/central
-    default_locale: en_US
-    default_mimetype: text/html
     disable_functions: 
       - exec
       - shell_exec
@@ -46,34 +34,9 @@ run.config:
       - gd
       - mbstring
     file_uploads: true
-    geoip_custom_directory: app/GeoIP/
-    iconv_internal_encoding: UTF-8
-    max_execution_time: 30
-    max_file_uploads: 20
-    max_input_time: 30
-    max_input_vars: 1000
-    memcache_chunk_size: 8192
-    memcache_hash_strategy: standard
-    memory_limit: 128M
-    php_fpm_events_mechanism: epoll
-    php_fpm_max_children: 20
+  
     
-    php_fpm_max_spare_servers: 1
-    post_max_size: 8M
-    register_argc_argv: "Off"
-    register_globals: "Off"
-    runtime: php-5.6
-    session_autostart: false
-    session_length: 3600
-    session_save_handler: files
-    session_save_path: app/sessions
-    short_open_tag: true
-    upload_max_filesize: 2M
-    webserver: apache
-    zend_extensions: 
-      - ioncube_loader
-      - opcache
-    zlib_output_compression: "Off"
+ 
 web.main: 
   log_watch: 
     ? "symfony[error]"
