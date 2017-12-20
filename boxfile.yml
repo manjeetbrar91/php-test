@@ -9,7 +9,12 @@ run.config:
       - index.php
       - index.html
     apache_log_level: warn
-     
+    # Web Server Settings
+    webserver: 'apache'
+   
+
+    # PHP Settings
+    runtime: 'php-5.6'
     apache_max_requests: 10000
     apache_max_spares: 10
     disable_functions: 
