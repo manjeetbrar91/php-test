@@ -9,7 +9,7 @@ run.config:
       - index.php
       - index.html
     apache_log_level: warn
-    apache_max_clients: 128
+     
     apache_max_requests: 10000
     apache_max_spares: 10
     apache_modules: 
@@ -17,7 +17,7 @@ run.config:
       - alias
       - rewrite
     apache_php_interpreter: fpm
-    apache_server_limit: 128
+    
     apache_static_expire: 86400
     apc_filters: ""
     apc_num_files_hint: 1000
@@ -60,7 +60,7 @@ run.config:
     memory_limit: 128M
     php_fpm_events_mechanism: epoll
     php_fpm_max_children: 20
-    php_fpm_max_requests: 128
+    
     php_fpm_max_spare_servers: 1
     post_max_size: 8M
     register_argc_argv: "Off"
