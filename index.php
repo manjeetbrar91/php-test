@@ -1,6 +1,6 @@
 <?php
  //echo "HELLO APP"
-phpinfo();
+//phpinfo();
 
 define('WP_USE_THEMES', true);
 
