@@ -12,10 +12,7 @@ run.config:
      
     apache_max_requests: 10000
     apache_max_spares: 10
-    apache_modules: 
-      - actions
-      - alias
-      - rewrite
+ 
     apache_php_interpreter: fpm
     
     apache_static_expire: 86400
