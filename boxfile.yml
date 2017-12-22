@@ -4,9 +4,10 @@ run.config:
     runtime: php-7.0
     extensions:
       - gd
-      - mysqli
       - curl
       - zlib
+      - pdo
+      - pdo_mysql
 
 web.wp:
   start: php-server
