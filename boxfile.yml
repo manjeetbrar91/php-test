@@ -15,5 +15,3 @@ web.wp:
       - wp-content/uploads/
 
 
-data.storage:
-image: nanobox/unfs:0.9
