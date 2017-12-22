@@ -1,7 +1,7 @@
 run.config:
   engine: php
   engine.config:
-    runtime: php-7.0
+    runtime: php-5.6
     extensions:
       - gd
       - curl
