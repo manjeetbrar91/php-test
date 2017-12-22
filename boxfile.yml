@@ -8,6 +8,7 @@ run.config:
       - zlib
       - pdo
       - mysqli
+      - session
 
 web.wp:
   start: php-server
