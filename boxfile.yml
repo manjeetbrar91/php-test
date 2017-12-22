@@ -1,51 +1,21 @@
---- 
-run.config: 
+run.config:
   engine: php
-  engine.config: 
-    allow_url_fopen: "On"
-    apache_access_log: false
-    apache_default_gateway: index.php
-    apache_index_list: 
-      - index.php
-      - index.html
-    apache_log_level: warn
-    # Web Server Settings
-    webserver: 'apache'
-   
-
-    # PHP Settings
-    runtime: 'php-5.6'
-    apache_max_requests: 10000
-    apache_max_spares: 10
-    disable_functions: 
-      - exec
-      - shell_exec
-      - system
-    display_errors: stderr
-    eaccelerator_filter: ""
-    eaccelerator_shm_max: "0"
-    eaccelerator_shm_size: "0"
-    error_reporting: E_ALL
-    expose_php: "On"
-    extensions: 
-      - pdo
-      - pdo_mysql
-      - session
-      - dom
-      - ctype
-      - xml
-      - xmlwriter
-      - curl
+  engine.config:
+    runtime: php-7.0
+    extensions:
       - gd
-      - mbstring
-    file_uploads: true
-  
-    
- 
-web.main: 
-  log_watch: 
-    ? "symfony[error]"
-    : /app/storage/logs/symfony.log
+      - mysqli
+      - curl
+      - zlib
+
+web.wp:
   start: php-server
-  writable_dirs: 
-    - var
+  network_dirs:
+    data.storage:
+      - wp-content/uploads/
+
+data.db:
+  image: nanobox/mysql:5.6
+
+data.storage:
+image: nanobox/unfs:0.9
